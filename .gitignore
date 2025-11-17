@@ -1,0 +1,60 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints
+
+# Видео файлы (слишком большие)
+*.MP4
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# Датасеты (слишком большие)
+rtsd_dataset/
+rtsd-dataset/
+*.zip
+*.tar.gz
+
+# Модели (можно добавить позже через Git LFS)
+models/*.pt
+models/*.pth
+rtsd_training/
+rtsd_yolo/
+
+# Логи
+*.log
+training*.log
+
+# Временные файлы
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Kaggle
+.kaggle/
+kaggle.json
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# Результаты
+road_passport.csv
+road_passport.json
+road_map.html
+road_analysis_output.mp4
+road_2d_scheme.png
+
