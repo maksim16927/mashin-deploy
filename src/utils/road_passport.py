@@ -6,7 +6,7 @@ from datetime import datetime
 from typing import List, Dict, Optional, Tuple
 import json
 from dataclasses import asdict
-from road_detector import RoadObject, RoadMarking, LaneInfo
+# from road_detector import RoadObject, RoadMarking, LaneInfo  # Убираем несуществующий импорт
 from gps_extractor import GPSExtractor
 
 

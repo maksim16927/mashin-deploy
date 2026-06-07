@@ -58,3 +58,16 @@ road_map.html
 road_analysis_output.mp4
 road_2d_scheme.png
 
+
+# Тяжёлые рабочие каталоги (не для репозитория)
+data/
+runs/
+videos/
+video_detections/
+datasets/
+/yolov8n.pt
+*.pt
+*.pth
+*.command
+*.bat
+*.vbs

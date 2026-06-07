@@ -1,0 +1,27 @@
+[Unit]
+# systemd-сервис MAX-бота (CPU-only). Установка:
+#   sudo cp deploy/mashin-max-bot.service /etc/systemd/system/
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now mashin-max-bot
+# Логи:  journalctl -u mashin-max-bot -f
+Description=MAX bot — распознавание дорожной инфраструктуры (CPU)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# ── ОТРЕДАКТИРУЙТЕ под свой сервер ───────────────────────────────────────────
+User=__USER__
+WorkingDirectory=__APP_DIR__
+Environment=BOT_DEVICE=cpu
+Environment=MAX_BOT_TOKEN=__MAX_BOT_TOKEN__
+# Необязательно: ограничить число потоков CPU (например, оставить ядро системе)
+# Environment=BOT_CPU_THREADS=4
+ExecStart=__APP_DIR__/.venv-ubuntu/bin/python __APP_DIR__/run_max_bot.py
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
